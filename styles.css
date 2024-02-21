@@ -428,14 +428,15 @@ body {
 
     
     
-
-    scale: 0.8;
+    width: 100%;
+ 
     
   }
 
 
   .smalltext{
-    font-size: 3.7rem;
+    font-size: 33px;
+    line-height: 40px;
   }
   
 
