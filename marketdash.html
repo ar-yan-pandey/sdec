@@ -1,13 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Market Dash</title>
-    <link rel="shortcut icon" href="assets/3.png" type="image/x-icon">
-    <meta http-equiv="refresh" content="0; url=https://community.stockgro.club/form/40f47ef2-75ac-4fdb-a799-71dca74e60ef">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="shortcut icon" href="assets/3.png" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+  <title>SDEC</title>
 </head>
-<body style="background-color: black;">
-    
+
+<body>
+  <nav class="section__container nav__container">
+
+    <div class="nav__logo" style="display:flex; text-align: center; align-items: center;"><img style="width: 40px;"
+        src="/assets/3.png" alt="">SDEC</div>
+    <ul class="nav__links">
+      <li class="link"><a href="https://www.sdec.site/#home">Home</a></li>
+      <li class="link"><a href="https://www.sdec.site/#aboutus">About Us</a></li>
+      <li class="link"><a href="https://www.sdec.site/#Team">Team</a></li>
+      <li class="link"><a href="https://www.sdec.site/#more">More</a></li>
+      <li class="link"><a href="https://www.sdec.site/#faq">FAQs</a></li>
+    </ul>
+    <a href="join.html"><button class="btn">Join Us</button></a>
+  </nav>
+  <header id="home" class="section__container header__container">
+    <h1 class="section__header">
+      <div class="smalltext">Market Dash</div>
+    </h1>
+    <p>
+      Trading Partner: StockGro
+    </p>
+    <h2 style="margin-top: 10px; color: white;">Registration</h2>
+    <p>
+      Please keep a time gap of atleast 5 MINUTES between Step 1 and Step 2.
+    </p>
+    <a target="_blank" href="https://community.stockgro.club/form/40f47ef2-75ac-4fdb-a799-71dca74e60ef"><button class="btnx">STEP 1</button ></a>
+    <a target="_blank" href="https://app.stockgro.club/ui/prepZone/"><button class="btnx">STEP 2</button></a>
+  </header>
+
+
+  
+
+  <footer id="contactus" class="section__container footer__container">
+    <div class="footer__grid">
+      <div class="footer__col" style="display: flex;">
+
+        <p class="cbox" style="margin: auto; scale: 1.1;">
+          <span><i class="ri-mail-fill"></i></span> sdec.contact@gmail.com
+        </p>
+        <p class="cbox" style="margin: auto;  scale: 1.1;">
+          <span><i class="ri-phone-fill"></i></span> +91 9555283358
+        </p>
+
+        <p class="cbox" style="margin: auto;  scale: 1.1;">
+          <span><i class="ri-map-pin-fill"></i></span>Bhubaneswar, Odisha
+        </p>
+      </div>
+    </div>
+
+  </footer>
+  <div class="section__container footer__bar">
+    <p>Copyright © 2024 SDEC . All rights reserved.</p>
+
+    <div class="socials">
+      <a target="_blank" href="https://www.instagram.com/official.sdec/"><span><i
+            class="ri-instagram-fill "></i></span></a>
+
+
+    </div>
+  </div>
+
+  <script>
+    const questionBox = document.getElementsByClassName("question__box");
+
+    for (let i = 0; i < questionBox.length; i++) {
+      questionBox[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+      });
+    }
+  </script>
 </body>
+
 </html>
