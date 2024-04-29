@@ -96,6 +96,7 @@ a {
   text-decoration: none;
 }
 
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--background-color);
@@ -163,10 +164,37 @@ body {
   margin-top: 4rem;
 }
 
+.cohort_list{
+  color: white;
+  margin: 5%;
+  text-align: left;
+  scale: 0.9;
+}
+
 .service__card {
   padding: 1rem;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 1rem;
+}
+
+.banners_container{
+
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: -10px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: auto;
+}
+.imagebox{
+  height: 50vh;
+  border-radius: 20px;
+  margin: 10px 10px 0 10px;
+  
+  
 }
 
 .service__icon {
@@ -190,6 +218,13 @@ body {
   font-size: 1.25rem;
   font-weight: 500;
   color: var(--white);
+}
+
+.tnc{
+  padding: 0 0 0 10%;
+  color: white;width: 70vw;
+  text-align: left;
+
 }
 
 .service__card p {
