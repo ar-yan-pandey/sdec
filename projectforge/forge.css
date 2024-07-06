@@ -180,11 +180,17 @@ body {
   color: white;
   margin: 5%;
   text-align: left;
-  scale: 0.9;
+  scale: 0.5;
 }
 
 .service__card {
   padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+}
+.service__card2 {
+  padding: 1rem;
+  color:#dedddd;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 1rem;
 }
