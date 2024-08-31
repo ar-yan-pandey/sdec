@@ -52,6 +52,7 @@
     #531bef
     
   );
+  
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -466,6 +467,54 @@ body {
   }
 }
 
+
+.collab{
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+
+}
+
+#collab{
+  width: 100%;
+  height: auto;
+
+}
+
+.collabbox{
+  height: 150px;
+  width: 150px;
+  border-radius: 30px;
+  background-color: #202020;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  filter:drop-shadow(10px, 10px, 10px, 10px,  #6c38fa) ;
+
+}
+
+.collabimg{
+  height: 80%;
+  width: 80%;
+  border-radius: 20%;
+  background-color: white;
+  
+
+
+}
+
+/* Project Forge  */
+
+.flogo{
+  width: auto;
+  height: 40vh
+}
+
+
 @media (width < 600px) {
   .header__container .section__header {
     font-size: 4rem;
@@ -519,3 +568,6 @@ body {
     text-align: center;
   }
 }
+
+
+
