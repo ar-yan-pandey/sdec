@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Builder</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-color: #712aff;
+        --secondary-color: #ffffff;
+        --background-color: #000010;
+        --text-light: #cbd5e1;
+        --white: #ffffff;
+      }
+
+      body {
+        color: var(--secondary-color);
+        font-family: "Inter", sans-serif;
+        overflow-x: hidden;
+        background-color: var(--background-color);
+      }
+
+      .bg-blur {
+        backdrop-filter: blur(10px);
+        background-color: rgba(30, 10, 60, 0.6);
+      }
+
+      .neon-text {
+        text-shadow: 0 0 5px rgba(113, 42, 255, 0.5),
+          0 0 10px rgba(113, 42, 255, 0.4), 0 0 15px rgba(113, 42, 255, 0.3);
+      }
+
+      .fade-in {
+        opacity: 0;
+        animation: fadeIn 1s ease-in forwards;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .bounce-in {
+        animation: bounceIn 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+
+      @keyframes bounceIn {
+        0% {
+          transform: scale(0.3);
+          opacity: 0;
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        70% {
+          transform: scale(0.9);
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      .floating {
+        animation: floating 3s ease-in-out infinite;
+      }
+
+      @keyframes floating {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mx-auto px-4 py-8">
+      <!-- Header -->
+      <header class="flex items-center justify-between mb-12">
+        <div class="flex items-end">
+          <div class="w-24 h-24 bounce-in">
+            <img src="./assets/buildit.png" alt="Resume Builder" />
+          </div>
+          <h1 class="text-2xl pb-4 neon-text">
+            by
+            <span style="color: var(--primary-color)" class="font-bold"
+              >SDEC</span
+            >
+          </h1>
+        </div>
+        <nav>
+          <a href="buildit.html" class="text-white hover:text-purple-300 mr-4"
+            >Home</a
+          >
+          <a href="#" class="text-white hover:text-purple-300">Contact</a>
+        </nav>
+      </header>
+
+      <!-- Main -->
+      <div class="text-center mb-16 fade-in" style="animation-delay: 0.3s">
+        <h2
+          class="text-5xl font-bold mb-6 neon-text floating"
+          style="color: var(--primary-color)"
+        >
+          Create Your Professional Resume
+        </h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+          Transform your career journey with our expert resume building service.
+          Stand out from the crowd with a professionally crafted resume.
+        </p>
+
+        <!-- Points Card -->
+        <div class="grid md:grid-cols-3 gap-8 mb-12">
+          <div
+            class="bg-blur p-6 rounded-lg fade-in"
+            style="animation-delay: 0.5s"
+          >
+            <i class="fas fa-bolt text-4xl text-purple-400 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">ATS Optimized</h3>
+            <p class="text-gray-300">
+              Built to pass Applicant Tracking Systems
+            </p>
+          </div>
+          <div
+            class="bg-blur p-6 rounded-lg fade-in"
+            style="animation-delay: 0.7s"
+          >
+            <i class="fas fa-star text-4xl text-purple-400 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Professional Design</h3>
+            <p class="text-gray-300">Modern templates that catch attention</p>
+          </div>
+          <div
+            class="bg-blur p-6 rounded-lg fade-in"
+            style="animation-delay: 0.9s"
+          >
+            <i class="fas fa-chart-line text-4xl text-purple-400 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">LinkedIn Optimization</h3>
+            <p class="text-gray-300">Stand out on LinkedIn with our service</p>
+          </div>
+        </div>
+
+        <!-- Google Form  -->
+        <div
+          class="bg-blur p-6 rounded-lg fade-in"
+          style="animation-delay: 1.1s"
+        >
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSfkRuhSzayRx3bgz4xyClb8FXWYUGCNryFqbIuRyiqTcEOGzQ/viewform"
+            width="100%"
+            height="800px"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+          >
+            Loading...
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

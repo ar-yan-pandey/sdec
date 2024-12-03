@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProResume Optimizer</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-color: #712aff;
+        --secondary-color: #ffffff;
+        --background-color: #000010;
+        --text-light: #cbd5e1;
+        --white: #ffffff;
+        --max-width: 1100px;
+      }
+
+      body {
+        color: var(--secondary-color);
+        font-family: "Inter", sans-serif;
+        overflow-x: hidden;
+      }
+
+      .bg-blur {
+        backdrop-filter: blur(10px);
+        background-color: rgba(30, 10, 60, 0.6);
+      }
+
+      .glowing-logo {
+        animation: logo-pulse 3s infinite alternate;
+      }
+
+      @keyframes logo-pulse {
+        0% {
+          transform: scale(1);
+          filter: drop-shadow(0 0 10px rgba(113, 42, 255, 0.5));
+        }
+        100% {
+          transform: scale(1.05);
+          filter: drop-shadow(0 0 20px rgba(113, 42, 255, 0.8));
+        }
+      }
+
+      .neon-text {
+        text-shadow: 0 0 5px rgba(113, 42, 255, 0.5),
+          0 0 10px rgba(113, 42, 255, 0.4), 0 0 15px rgba(113, 42, 255, 0.3);
+      }
+
+      .animated-gradient {
+        background: linear-gradient(45deg, #712aff, #9e4bff, #c789ff);
+        background-size: 200% 200%;
+        animation: gradient-move 5s ease infinite;
+      }
+
+      @keyframes gradient-move {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .swiper-slide {
+        perspective: 1000px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .card-3d-effect {
+        transition: all 0.5s ease;
+      }
+
+      .card-3d-effect:hover {
+        transform: rotateY(10deg) translateZ(50px);
+        box-shadow: 0 20px 40px rgba(113, 42, 255, 0.3);
+      }
+
+      .seats-left {
+        animation: pulse-urgent 1.5s infinite alternate;
+      }
+
+      @keyframes pulse-urgent {
+        0% {
+          color: #ff4d4d;
+          transform: scale(1);
+        }
+        100% {
+          color: #ff6b6b;
+          transform: scale(1.05);
+        }
+      }
+
+      /* Add new styles for glass shine effect */
+      .card-shine {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .card-shine::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(
+          45deg,
+          transparent 0%,
+          rgba(255, 255, 255, 0.1) 45%,
+          rgba(255, 255, 255, 0.2) 50%,
+          rgba(255, 255, 255, 0.1) 55%,
+          transparent 100%
+        );
+        transform: translateX(-100%) translateY(-100%) rotate(45deg);
+        transition: 0.5s;
+        pointer-events: none;
+      }
+
+      .card-shine:hover::before {
+        transform: translateX(100%) translateY(100%) rotate(45deg);
+      }
+
+      .fade-in {
+        opacity: 0;
+        animation: fadeIn 1s ease-in forwards;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .bounce-in {
+        animation: bounceIn 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+
+      @keyframes bounceIn {
+        0% {
+          transform: scale(0.3);
+          opacity: 0;
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        70% {
+          transform: scale(0.9);
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-black">
+    <div class="container mx-auto px-4 py-8">
+      <!-- Header with Logo -->
+      <header class="flex items-center justify-between mb-12">
+        <div class="flex items-end">
+          <div class="w-24 h-24 bounce-in">
+            <img src="./assets/buildit.png" alt="Buildit" />
+          </div>
+          <h1 class="text-2xl pb-4 neon-text">
+            by
+            <span style="color: var(--primary-color)" class="font-bold"
+              >SDEC</span
+            >
+          </h1>
+        </div>
+        <nav>
+          <a href="#" class="text-white hover:text-purple-300 mr-4">Services</a>
+          <a href="#" class="text-white hover:text-purple-300">Contact</a>
+        </nav>
+      </header>
+
+      <!-- Main Content -->
+      <div class="text-center mb-16 fade-in" style="animation-delay: 0.3s">
+        <h2
+          class="text-5xl font-bold mb-6 neon-text"
+          style="color: var(--primary-color)"
+        >
+          Build Your Professional Brand
+        </h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+          Unlock your career potential with a professionally crafted resume that
+          stands out in today's competitive job market.
+        </p>
+      </div>
+
+      <!-- Swiper Carousel -->
+      <div
+        class="swiper-container mySwiper fade-in"
+        style="animation-delay: 0.6s"
+      >
+        <div class="swiper-wrapper">
+          <!-- Premium Package Card -->
+          <div class="swiper-slide">
+            <div
+              class="bg-gray-900 p-8 rounded-2xl w-96 text-center bg-blur card-3d-effect card-shine border border-purple-700"
+            >
+              <div class="mb-6">
+                <h2
+                  class="text-2xl font-bold mb-4"
+                  style="color: var(--primary-color)"
+                >
+                  1 Package
+                </h2>
+                <div class="bg-purple-900 p-4 rounded-xl mb-4">
+                  <div class="text-lg font-semibold text-gray-300 mb-4">
+                    Coming Soon
+                  </div>
+                  <ul class="text-gray-300 text-left space-y-2">
+                    <li class="flex items-center">
+                      <i class="fas fa-star text-yellow-400 mr-2"></i>
+                      Advanced Resume Analysis
+                    </li>
+                    <li class="flex items-center">
+                      <i class="fas fa-star text-yellow-400 mr-2"></i>
+                      Video Interview Preparation
+                    </li>
+                    <li class="flex items-center">
+                      <i class="fas fa-star text-yellow-400 mr-2"></i>
+                      Career Coaching Sessions
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <button
+                class="w-full py-3 rounded-full bg-gray-600 cursor-not-allowed text-white font-bold opacity-75"
+              >
+                Coming Soon
+              </button>
+            </div>
+          </div>
+
+          <!-- Service Card -->
+          <div class="swiper-slide">
+            <div
+              class="bg-gray-900 p-8 rounded-2xl w-96 text-center bg-blur card-3d-effect card-shine border border-purple-700"
+            >
+              <div class="mb-6">
+                <h2
+                  class="text-2xl font-bold mb-4"
+                  style="color: var(--primary-color)"
+                >
+                  Resume Package
+                </h2>
+                <div class="bg-purple-900 p-4 rounded-xl mb-4">
+                  <ul class="text-gray-300 text-left space-y-2">
+                    <li class="flex items-center">
+                      <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                      Customized Modern Resume
+                    </li>
+                    <li class="flex items-center">
+                      <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                      LinkedIn Profile Optimization
+                    </li>
+                    <li class="flex items-center">
+                      <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                      Lifetime Resume Consultancy
+                    </li>
+                    <li class="flex items-center">
+                      <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                      Personal Branding Strategy
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="mb-6">
+                <span
+                  class="original-price text-lg line-through text-gray-500 mr-2"
+                  >Rs. 149</span
+                >
+                <span
+                  class="text-3xl font-bold animated-gradient"
+                  style="
+                    background: linear-gradient(
+                      45deg,
+                      #712aff,
+                      #9e4bff,
+                      #c789ff
+                    );
+                    -webkit-background-clip: text;
+                    color: transparent;
+                  "
+                >
+                  Rs. 99
+                </span>
+              </div>
+              <a href="/resume.html">
+                <button
+                  class="w-full py-3 rounded-full bg-purple-600 hover:bg-purple-700 transition transform hover:scale-105 text-white font-bold"
+                >
+                  Register Now
+                </button>
+              </a>
+            </div>
+          </div>
+
+          <!-- Coming Soon Package Card -->
+          <div class="swiper-slide">
+            <div
+              class="bg-gray-900 p-8 rounded-2xl w-96 text-center bg-blur card-3d-effect card-shine border border-purple-700"
+            >
+              <div class="mb-6">
+                <h2
+                  class="text-2xl font-bold mb-4"
+                  style="color: var(--primary-color)"
+                >
+                  2 Package
+                </h2>
+                <div class="bg-purple-900 p-4 rounded-xl mb-4">
+                  <div class="text-lg font-semibold text-gray-300 mb-4">
+                    Coming Soon
+                  </div>
+                  <ul class="text-gray-300 text-left space-y-2">
+                    <li class="flex items-center">
+                      <i class="fas fa-crown text-yellow-400 mr-2"></i>
+                      Complete Career Transformation
+                    </li>
+                    <li class="flex items-center">
+                      <i class="fas fa-crown text-yellow-400 mr-2"></i>
+                      1-on-1 Mentorship
+                    </li>
+                    <li class="flex items-center">
+                      <i class="fas fa-crown text-yellow-400 mr-2"></i>
+                      Job Placement Assistance
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <button
+                class="w-full py-3 rounded-full bg-gray-600 cursor-not-allowed text-white font-bold opacity-75"
+              >
+                Coming Soon
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <!-- Seats Section -->
+      <div class="text-center mt-12 fade-in" style="animation-delay: 0.9s">
+        <p class="text-sm text-gray-400">
+          Limited Seats Remaining:
+          <span id="seatsLeft" class="font-bold seats-left text-lg"></span>
+        </p>
+      </div>
+    </div>
+
+    <script>
+      var swiper = new Swiper(".swiper-container", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        initialSlide: 1, // Make the 2nd slide appear by default
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        },
+      });
+
+      function updateSeatsLeft() {
+        const seatsElement = document.getElementById("seatsLeft");
+        const seats = Math.floor(Math.random() * 51) + 50;
+        seatsElement.textContent = seats + " Seats";
+      }
+
+      updateSeatsLeft();
+      setInterval(updateSeatsLeft, Math.random() * 5000 + 5000);
+    </script>
+  </body>
+</html>
